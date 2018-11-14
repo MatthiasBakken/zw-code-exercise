@@ -22,7 +22,7 @@ class HomeSPA extends Component {
 
     changeColorHandler() {
         let { colors } = this.state;
-        colors = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
+        colors = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
         this.setState({ colors: colors })
     }
 
@@ -34,7 +34,7 @@ class HomeSPA extends Component {
                     className="game-container"
                     onMouseUp={this.classesChangeHangler}
                     onMouseMove={this.changeColorHandler}
-                    style={{ height: "100vw", width: "100vw" }}
+                    style={{ height: "100vh", width: "100vw" }}
                 >
                     <GithubKitty />
                     <Score score={score} colors={colors} />
