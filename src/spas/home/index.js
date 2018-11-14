@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import './styles.scss'
 import GithubKitty from './github.svg'
 import Score from './Score'
@@ -23,7 +23,7 @@ class HomeSPA extends Component {
     changeColorHandler() {
         let { colors } = this.state;
         colors = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
-        this.setState({colors: colors})
+        this.setState({ colors: colors })
     }
 
     render() {
@@ -34,7 +34,7 @@ class HomeSPA extends Component {
                     className="game-container"
                     onMouseUp={this.classesChangeHangler}
                     onMouseMove={this.changeColorHandler}
-                    style={{height: "100vw", width: "100vw"}}
+                    style={{ height: "100vw", width: "100vw" }}
                 >
                     <GithubKitty />
                     <Score score={score} colors={colors} />
@@ -54,7 +54,7 @@ class HomeSPA extends Component {
                     onMouseMove={this.changeColorHandler}
                 >
                     <GithubKitty />
-                    <Score score={score} colors={colors} />    
+                    <Score score={score} colors={colors} />
                     <h1>You Win</h1>
                 </div>
             )
